@@ -11,3 +11,10 @@ jokainen tiedosto on yksi osoite
 esim pages -> joku kansio -> sivu.tsx
 
 http://localhost:3000/joku/sivu
+http://localhost:3000/joku/555 (juttuId)
+
+
+pnpm install react-bootstrap bootstrap
+pnpm install @popperjs/core@^2.11.6
+
+ctrl+shift+p -> restart extension host
