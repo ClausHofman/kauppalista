@@ -1,0 +1,13 @@
+https://nextjs.org/docs/getting-started
+
+npm install -g pnpm # node packagemanager
+
+pnpm create next-app --typescript
+
+pnpm dev
+
+jokainen tiedosto on yksi osoite
+
+esim pages -> joku kansio -> sivu.tsx
+
+http://localhost:3000/joku/sivu
