@@ -1,4 +1,8 @@
+https://github.com/Raision-seudun-koulutuskuntayhtyma/kauppalista
+
 https://nextjs.org/docs/getting-started
+
+https://www.tutorialspoint.com/sqlite/index.htm
 
 npm install -g pnpm # node packagemanager
 
