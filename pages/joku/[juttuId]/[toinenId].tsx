@@ -1,19 +1,24 @@
-import {Button} from 'react-bootstrap';
-import Link from 'next/Link';
-import { useRouter } from 'next/router'
+import Link from 'next/link';
+import {useRouter} from 'next/router';
+import { Button } from 'react-bootstrap';
 
 export default function Post() {
-  const router = useRouter()
-  const { juttuId, toinenId } = router.query;
+    const router = useRouter();
+    const {juttuId, toinenId} = router.query;
 
-  return  (
-    <div>
-        <h1>juttusivu</h1>
-        <p>juttu id: {juttuId}</p>
-        <p>toinen id: {toinenId}</p>
-        <Button>
-        <Link href="/joku/sivu">joku sivu</Link>
-        </Button>
-    </div>
-  );
+    console.log(router.query);
+
+    return (
+        <div>
+            <h1>Joku juttusivu</h1>
+            <p>Juttu id: {juttuId}</p>
+            <p>Toinen id: {toinenId}</p>
+            
+            <p>
+              <Button>
+                <Link href="/joku/sivu">Joku sivu</Link>
+              </Button>
+            </p>
+        </div>
+    );
 }
