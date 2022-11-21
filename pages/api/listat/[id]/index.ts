@@ -2,6 +2,7 @@ import type {NextApiRequest, NextApiResponse} from 'next';
 
 import {getDatabase} from '@/utils/db';
 import {ErrorResponse} from '@/utils/errors';
+import {tryParseInt} from '@/utils/numbers';
 import {ShopList} from '@/utils/types';
 
 export default async function handler(
@@ -20,16 +21,7 @@ export default async function handler(
             });
             return;
         }
-        console.log('Id number', idNumber);
         const shopList = await db.getShopList(idNumber);
         res.status(200).json(shopList);
     }
-}
-
-function tryParseInt(value: string | null | undefined): number | null {
-    try {
-        const result = parseInt(value ?? '') ?? null;
-        return isNaN(result) ? null : result;
-    } catch (e) {}
-    return null;
 }
